@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/5a932b4177.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <link rel="stylesheet" type="text/css" href="blog.css">
+    <link rel="stylesheet" type="text/css" href="kontakty.css">
+
+</head>
+
+<body>
+
+        <div id="kontejner">
+                <div class="header" id="myHeader">
+                    <div class="horni_lista">
+
+                        <div class="hamburger" onclick="displayMenu()">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+
+                        <div class="logo">
+                            <a href="project.html">Sportee<span class="logo-white">Zone</span></a>
+                            <img src="images/star.png" alt="star">
+                        </div>
+                    </div>
+
+                    <ul id="menu">
+                        <li><a href="#uvod">Úvod</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="project.html">O projektu</a></li>
+                        <li><a href="kontakty.html">Kontakty</a></li>
+                    </ul>
+
+
+                </div>
+
+                <div id="uvod" onmouseover="cancelMenu()">
+                    <div class="perex">
+                        <p class="info"></p>
+                    </div>
+
+                </div>
+
+
+
+    <div id="app">
+        <h1 class="heading2">
+            <label>Jak ti můžeme pomoci?</label>
+        </h1>
+        <p class="intro">
+            Nenašel jsi ve výběru aktivitu, kterou preferuješ?
+            Chceš si něco vyfiltrovat a nemůžeš?
+            <br>Tak nám pomoz to zlepšit. </br>
+        </p>
+
+
+
+        <div class="container">
+            <form action="action_page.php">
+
+                <label for="fname">Tvé jméno</label>
+                <input type="text" id="fname" name="firstname" placeholder="Prosím zadej své jméno">
+
+                <label for="lname">Tvé příjmení</label>
+                <input type="text" id="lname" name="lastname" placeholder="Prosím zadej své příjmení">
+
+                <label for="lname">E-mail</label>
+                <input type="text" id="lname" name="lastname" placeholder="Prosím zadej svůj email">
+
+
+                <label for="subject">Zpráva</label>
+                <textarea id="subject" name="subject" placeholder="Prosím zadej svou zprávu" style="height:200px"></textarea>
+
+                <input type="submit" value="Potvrdit">
+
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- <div class="contact-form">
+
+            <div class="row">
+                <div class="introduction">
+                    <div class="name">
+                        <label class="">
+                            <label>Tvé jméno</label>
+                        </label>
+                        <input placeholder="Prosím zadej své jméno">
+                        <div class="invalid-feedback">
+                            <label>Prosím vyplň jméno</label>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <label class="">
+                            <label>E-mail</label>
+                        </label>
+                        <input placeholder="Prosím zadej svůj email">
+                        <div class="invalid-feedback">
+                            <label>Zadali jste nesprávný email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="message">
+                    <label class="">
+                        <label>Zpráva</label>
+                    </label>
+                    <textarea placeholder="Prosím zadej svou zprávu" rows=5 col=5></textarea>
+                    <div class="invalid-feedback">
+                        <label>Prosím vyplň zprávu</label>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="text-center col">
+                        <button type="button">
+                            <label>Odeslat zprávu</label>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div> -->
+
+</body>
+
+</html>

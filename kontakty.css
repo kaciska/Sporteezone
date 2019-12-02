@@ -1,0 +1,38 @@
+html body {
+  font-family: 'Cabin', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  color: solid #ccc;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 11px;
+  margin-bottom: 16px;
+  resize: vertical;
+
+}
+
+input[type=submit]:hover {
+  background-color: solid grey;
+}
+
+.container {
+  border-radius: 5px;
+  /* background-color: #f2f2f2; */
+  padding: 20px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.intro {
+  text-align: center;
+}

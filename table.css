@@ -1,0 +1,80 @@
+/* Seznam cviceni */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+body {
+  color: #27375b;
+  background: white;
+}
+
+.main-name {
+  text-align: center;
+  padding: 40px;
+}
+
+.session-body {
+  display: flex;
+  padding: 4rem 4rem 4rem;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  border-block-end: silver;
+  border-radius: 8px;
+  box-shadow: 0 3px 25px rgba(0, 0, 1);
+}
+
+.session-title1 {
+  background-color: rgb(244, 124, 121);
+  margin-top: 0px;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.session-title2 {
+  background-color: rgb(100, 195, 158);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.session-title3 {
+  background-color: rgb(215, 190, 95);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.session-title4 {
+  background-color: rgb(161, 190, 95);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.session-title5 {
+  background-color: rgb(209, 109, 15);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.list-item {
+  background: #fff;
+  padding: 20px 70px;
+  font-size: 1.4rem;
+}
+
+.col-md-6 {
+  display: flex;
+  flex-direction: row;
+
+}
