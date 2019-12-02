@@ -1,0 +1,208 @@
+[
+    {
+        "afit": {
+            "courses": [
+                {
+                    "name": "Spinning - Katka Nosková",
+                    "day": "28",
+                    "start": "16:20",
+                    "end": "17:15",
+                    "availability": "16 / 29                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Spinning - Lenka Kučerová",
+                    "day": "po 25.11.",
+                    "start": "17:25",
+                    "end": "18:20",
+                    "availability": "2 / 14                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Spinning - Adam Čerbák - prodloužená lekce",
+                    "day": "út 26.11.",
+                    "start": "18:30",
+                    "end": "19:35",
+                    "availability": "0 / 14                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "H.E.A.T. - Simona Jílková",
+                    "day": "st 27.11.",
+                    "start": "16:00",
+                    "end": "16:50",
+                    "availability": "7 / 18                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "H.E.A.T. - Gabriela  Sedláková",
+                    "day": "čt 28.11.",
+                    "start": "17:00",
+                    "end": "17:50",
+                    "availability": "23 / 29                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "H.E.A.T. - Tereza Auermüllerová",
+                    "day": "pá 29.11.",
+                    "start": "18:00",
+                    "end": "18:50",
+                    "availability": "12 / 14                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "H.E.A.T. s posilováním  - Tereza Auermüllerová",
+                    "day": "so 30.11.",
+                    "start": "19:00",
+                    "end": "19:50",
+                    "availability": "9 / 14                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Kruháč - Veronika Hrubanová",
+                    "day": "ne 1.12.",
+                    "start": "6:20",
+                    "end": "7:15",
+                    "availability": "5 / 14                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Tabata - Tereza Auermüllerová",
+                    "start": "16:00",
+                    "end": "16:55",
+                    "availability": "1 / 14                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Strong Body - Veronika Hrubanová",
+                    "start": "17:00",
+                    "end": "17:55",
+                    "availability": "4 / 14                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "TRX - pokročilí - Veronika Hrubanová",
+                    "start": "18:00",
+                    "end": "18:55",
+                    "availability": "14 / 18                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Kruháč - Veronika Hrubanová",
+                    "start": "19:00",
+                    "end": "19:55",
+                    "availability": "24 / 29                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Pilates - Jana Potrusilová",
+                    "start": "17:15",
+                    "end": "18:10",
+                    "availability": "13 / 14                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Power vinyasa yoga - Monika  Štaudová",
+                    "start": "18:15",
+                    "end": "19:10",
+                    "availability": "26 / 29                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Flexi Yoga - Monika  Štaudová",
+                    "start": "19:15",
+                    "end": "20:10",
+                    "availability": "26 / 29                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Spinning - Jarda Holánek - prodloužená lekce",
+                    "start": "17:25",
+                    "end": "18:30",
+                    "availability": "6 / 14                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "H.E.A.T. s posilováním  - Simona Jílková",
+                    "start": "6:20",
+                    "end": "7:15",
+                    "availability": "7 / 10                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "H.E.A.T. - Gabriela  Sedláková",
+                    "start": "16:00",
+                    "end": "16:50",
+                    "availability": "10 / 14                                    volných míst",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "H.E.A.T. s posilováním  - Gabriela  Sedláková",
+                    "start": "17:00",
+                    "end": "17:55",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Strong Body - Kristýna Jakubcová",
+                    "start": "17:00",
+                    "end": "17:55",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Tabata - Kristýna Jakubcová",
+                    "start": "18:00",
+                    "end": "18:50",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Jin Yoga - Tereza Auermüllerová",
+                    "start": "6:20",
+                    "end": "7:15",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Spinning - Lenka Kučerová",
+                    "start": "10:00",
+                    "end": "10:55",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "H.E.A.T. Spoteee s posilováním bříška - Lenka Kučerová",
+                    "start": "9:00",
+                    "end": "9:50",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Spinning - Lenka Kučerová",
+                    "start": "10:00",
+                    "end": "10:55",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Spinning - Michal Jakubík",
+                    "start": "17:25",
+                    "end": "18:20",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "H.E.A.T. - Simona Jílková",
+                    "start": "18:00",
+                    "end": "18:55",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "TRX - Simona Jílková",
+                    "start": "17:00",
+                    "end": "17:55",
+                    "price": "150 Kč                                /1 os."
+                },
+                {
+                    "name": "Tabata - Simona Jílková",
+                    "start": "19:00",
+                    "end": "19:55",
+                    "price": "150 Kč                                /1 os."
+                }
+            ]
+        }
+    }
+]
