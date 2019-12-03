@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="container">
 	<div id="cover-photo">
 		<div class="text-cover-photo">
 			<h1>Sportuj s námi</h1>
@@ -54,6 +54,17 @@ export default {
   .text-cover-photo {
     padding-left: 20%;
     padding-right: 20%;
+  }
+}
+
+@media (min-width: 860px) {
+  .container {
+    width: 960px;
+    background-color: white;
+    margin: -80px auto 0 auto;
+    box-shadow: 0 0 8px 1px rgba(140, 138, 140, 1);
+    position: relative;
+    z-index: 1;
   }
 }
 </style>

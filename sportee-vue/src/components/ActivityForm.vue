@@ -1,37 +1,36 @@
 <template>
-  <div class="container">
-        <div id="app">
-            <h1>Vyber si aktivitu</h1>
-            <div class="date">
-                <label>Datum:</label>
-                <input type="date" name="date">
-            </div>
 
-            <div class="time">
-                <label>Zvolte čas:</label>
-                <input type="time" name="time">
-            </div>
-            <div class="activity">
-                <label>Aktivita:</label>
-                <select>
-                    <option value="0">Vyber aktivitu:</option>
-                    <option value="1">Aerobik</option>
-                    <option value="2">Bosu</option>
-                    <option value="3">Jóga</option>
-                    <option value="4">Kruhový trénink</option>
-                    <option value="5">Pilates</option>
-                    <option value="6">Walking</option>
-                </select>
-            </div>
+  <div id="app">
+      <h1>Vyber si aktivitu</h1>
+      <div class="date">
+          <label>Datum:</label>
+          <input type="date" name="date">
+      </div>
 
-            <div class="card">
-                <label>Vyber kartu:</label><br>
-                <input type="checkbox" class="largerCheckbox" name="multisport"><label>Multisport</label>
-                <input type="checkbox" class="largerCheckbox" name="activepass"><label>Activepass</label>
-            </div>
-          <button>Vyhledat</button>
-        </div>
-	</div>
+      <div class="time">
+          <label>Zvolte čas:</label>
+          <input type="time" name="time">
+      </div>
+      <div class="activity">
+          <label>Aktivita:</label>
+          <select>
+              <option value="0">Vyber aktivitu:</option>
+              <option value="1">Aerobik</option>
+              <option value="2">Bosu</option>
+              <option value="3">Jóga</option>
+              <option value="4">Kruhový trénink</option>
+              <option value="5">Pilates</option>
+              <option value="6">Walking</option>
+          </select>
+      </div>
+
+      <div class="card">
+          <label>Vyber kartu:</label><br>
+          <input type="checkbox" class="largerCheckbox" name="multisport"><label>Multisport</label>
+          <input type="checkbox" class="largerCheckbox" name="activepass"><label>Activepass</label>
+      </div>
+    <button>Vyhledat</button>
+  </div>
 
 </template>
 
@@ -119,15 +118,6 @@ input.largerCheckbox {
   margin: 5px;
 }
 
-@media (min-width: 860px) {
-  .container {
-    width: 960px;
-    background-color: white;
-    margin: -80px auto 0 auto;
-    box-shadow: 0 0 8px 1px rgba(140, 138, 140, 1);
-    position: relative;
-    z-index: 1;
-  }
-}
+
 
 </style>
