@@ -7,7 +7,7 @@
 	<div class="header">
 		<div class="horni_lista">
 
-			<div class="hamburger" onclick="displayMenu()">
+			<div class="hamburger" v-on:click="displayMenu">
 				<div class="bar1"></div>
 				<div class="bar2"></div>
 				<div class="bar3"></div>
@@ -18,7 +18,7 @@
 		</div>
 	</div>
 
-	<div id="uvod" onmouseover="cancelMenu()">
+	<div id="uvod" v-on:mouseover="cancelMenu">
 		<div class="perex">
 			<p class="info"></p>
 		</div>
@@ -42,25 +42,24 @@ export default {
   name: 'app',
   components: {
     "logo": Logo
+  },
+  methods: {
+      displayMenu() {
+        let button = document.querySelector("#menu");
 
-  }
-}
+        if (button.style.display === "block") {
+            button.style.display = "none";
+        } else {
+            button.style.display = "block";
+        }
+    },
+    cancelMenu() {
+        if (window.matchMedia("(max-width: 499px)").matches) {
 
-function displayMenu() {
-  let tlacitko = document.querySelector("#menu");
-  if (tlacitko.style.display === "block") {
-      tlacitko.style.display = "none";
-  } else {
-      tlacitko.style.display = "block";
-  }
-}
-
-function cancelMenu() {
-
-if (window.matchMedia("(max-width: 499px)").matches) {
-
-      let tlacitko = document.querySelector("#menu");
-      tlacitko.style.display = "none";
+            let button = document.querySelector("#menu");
+            button.style.display = "none";
+        }
+    }
   }
 }
 

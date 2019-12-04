@@ -14,6 +14,8 @@
 
   <signpost />
 
+  <pagefooter />
+
   </div>
 </div>
 
@@ -23,11 +25,13 @@
 
 import ActivityForm from './../components/ActivityForm.vue'
 import SignPost from './../components/SignPost.vue'
+import PageFooter from './../components/PageFooter.vue'
 
 export default {
   components: {
     "activityform": ActivityForm,
-    "signpost": SignPost
+    "signpost": SignPost,
+    "pagefooter": PageFooter
   }
 }
 
