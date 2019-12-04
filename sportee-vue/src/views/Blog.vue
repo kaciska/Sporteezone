@@ -1,5 +1,5 @@
 <template>
-<div>
+
   <div class="container blog">
 
 		<div class="blog-container">
@@ -7,13 +7,16 @@
 			<p>V našem blogu se dočtete novinky ze světa sportu, recenze na sportoviště a také informace o jednotlivých
 				sportech.</p>
 		</div>
-	</div>
+
 
   <mainarticle />
 
   <hr>
 
   <otherarticle />
+
+  <otherarticle />
+
 
   </div>
 
@@ -44,10 +47,19 @@ export default {
 }
 
 @media (min-width: 860px) {
-	.container.blog {
+	.blog {
 		padding: 10px;
 		margin: 0px auto 0 auto;
-	}
+  }
+
+  .container {
+    width: 960px;
+    background-color: white;
+    box-shadow: 0 0 8px 1px rgba(140, 138, 140, 1);
+    position: relative;
+    z-index: 1;
+  }
 }
+
 
 </style>
