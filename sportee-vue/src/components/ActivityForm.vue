@@ -4,31 +4,37 @@
       <h1>Vyber si aktivitu</h1>
       <div class="date">
           <label>Datum:</label>
-          <input type="date" name="date">
+          <input v-model="date" placeholder="Vyber datum" type="date" name="date">
+          <p>{{date}}</p>
       </div>
 
       <div class="time">
           <label>Zvolte čas:</label>
-          <input type="time" name="time">
+          <input v-model="time" type="time" name="time">
+           <p>{{time}}</p>
       </div>
       <div class="activity">
           <label>Aktivita:</label>
-          <select>
-              <option value="0">Vyber aktivitu:</option>
-              <option value="1">Aerobik</option>
-              <option value="2">Bosu</option>
-              <option value="3">Jóga</option>
-              <option value="4">Kruhový trénink</option>
-              <option value="5">Pilates</option>
-              <option value="6">Walking</option>
+          <select v-model="selected">
+              <option>Vyber aktivitu:</option>
+              <option>Aerobik</option>
+              <option>Bosu</option>
+              <option>Jóga</option>
+              <option>Kruhový trénink</option>
+              <option>Pilates</option>
+              <option>Walking</option>
           </select>
       </div>
 
+      <p>{{selected}}</p>
+
       <div class="card">
           <label>Vyber kartu:</label><br>
-          <input type="checkbox" class="largerCheckbox" name="multisport"><label>Multisport</label>
-          <input type="checkbox" class="largerCheckbox" name="activepass"><label>Activepass</label>
+          <input v-model="multisport" type="checkbox" class="largerCheckbox" id="multisport" name="multisport" value="multisport"><label>Multisport</label>
+          <input v-model="activepass" type="checkbox" class="largerCheckbox" id="activepass" name="activepass" value="activepass"><label>Activepass</label>
       </div>
+
+      <p>{{multisport}},{{activepass}}</p>
     <button>Vyhledat</button>
   </div>
 
@@ -41,6 +47,15 @@ import SearchButton from './../components/SearchButton.vue'
 export default {
   components: {
     "searchbutton": SearchButton
+  },
+  data() {
+    return {
+      date: "",
+      time: "",
+      selected: "",
+      multisport: false,
+      activepass: false
+    }
   }
 }
 </script>
