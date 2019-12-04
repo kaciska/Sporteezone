@@ -11,7 +11,7 @@
 		</p>
 
 		<div class="first-col">
-			<a href="blog.html">
+			<router-link to="/blog">
 				<div class="object pink">
 					<div class="icon">
 						<vue-fontawesome icon="book" size="2" color="white"></vue-fontawesome>
@@ -21,7 +21,7 @@
 						<p class="description">Zajímavé čtení o&nbsp;sportu a&nbsp;cvičení</p>
 					</div>
 				</div>
-			</a>
+			</router-link>
 
 			<a href="#">
 				<div class="object green">
@@ -38,7 +38,7 @@
 		</div>
 
 		<div class="second-col">
-			<a href="#">
+			<router-link to="/projekt">
 				<div class="object yellow">
 					<div class="icon">
 						<vue-fontawesome icon="file" size="2" color="white"></vue-fontawesome>
@@ -48,9 +48,9 @@
 						<p class="description">Přečtěte si, jak celý projekt vznikl</p>
 					</div>
 				</div>
-			</a>
+			</router-link>
 
-			<a href="#">
+			<router-link to="/kontakt">
 				<div class="object pea">
 					<div class="icon">
 						<vue-fontawesome icon="comment" size="2" color="white"></vue-fontawesome>
@@ -60,7 +60,7 @@
 						<p class="description">Máte pro nás nějaký vzkaz?</p>
 					</div>
 				</div>
-			</a>
+			</router-link>
 		</div>
 	</div>
 </div>
