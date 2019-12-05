@@ -27,6 +27,7 @@
 	<ul id="menu">
 		<li><router-link to="/">Home</router-link></li>
 		<li><router-link to="/blog">Blog</router-link></li>
+        <li><router-link to="/recenze">Recenze</router-link></li>
 		<li><router-link to="/projekt">O projektu</router-link></li>
 		<li><router-link to="/kontakt">Kontakt</router-link></li>
 	</ul>

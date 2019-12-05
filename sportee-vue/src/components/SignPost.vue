@@ -23,7 +23,7 @@
 				</div>
 			</router-link>
 
-			<a href="#">
+			<router-link to="/recenze">
 				<div class="object green">
 					<div class="icon">
 						<i class="fas fa-star-half-alt fa-lg"></i>
@@ -34,7 +34,7 @@
 						<p class="description">Kde se nám dobře cvičilo</p>
 					</div>
 				</div>
-			</a>
+			</router-link>
 		</div>
 
 		<div class="second-col">
