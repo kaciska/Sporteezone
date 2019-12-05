@@ -1,24 +1,14 @@
 <template>
 <div class="main-article">
-	<img src="../assets/running_women.jpg" alt="women run up">
+	<img src="../assets/yoga.jpg" alt="women in yoga position">
 	<div class="article-holder">
 		<div class="text">
-			<h2>Nejaktuálnější nebo nejdůležitějí článek</h2>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis, quas perspiciatis pariatur ut
-				tempora aperiam possimus libero, cumque quae quisquam, beatae quia. Cum quam iure, blanditiis nihil
-				at
-				accusamus.</p>
+			<h2>Hotjóga přohřeje tělo i duši</h2>
+			<p>Jóga ať už klasické nebo jakákoliv jiná mě nikdy nějak extra nelákala. To se změnilo po několika návštěvách
+				hotjógy, kdy jsem zjistila, kolik benefitů mi cvičení ásán v teple přináší. Co mi jóga dává a kam chodím cvičit?
+			</p>
 		</div>
-		<div id="readMore">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis, quas perspiciatis pariatur ut
-				tempora aperiam possimus libero, cumque quae quisquam, beatae quia. Cum quam iure, blanditiis nihil
-				at accusamus.</p>
-
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis, quas perspiciatis pariatur ut
-					tempora aperiam possimus libero, cumque quae quisquam, beatae quia. Cum quam iure, blanditiis nihil
-					at accusamus.</p>
-		</div>
-		<button onclick="readArticle()">Číst více</button>
+		<button v-on:click="readArticle()">Číst více</button>
 	</div>
 </div>
 

@@ -1,6 +1,6 @@
 <template>
 	<div>
-	<a href="#"><button>Vyhledat</button></a>
+	<button></button>
 	</div>
 </template>
 

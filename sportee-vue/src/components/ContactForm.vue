@@ -25,18 +25,18 @@
 		<label for="subject">Zpráva</label>
 		<textarea v-model="message" id="subject" name="subject" placeholder="Prosím zadejte svou zprávu" style="height:200px"></textarea>
 
-		<submitbutton />
+		<button />
 
 	</form>
 </div>
 </template>
 
 <script>
-  import SubmitButton from './../components/SubmitButton.vue'
+  import Button from './../components/Button.vue'
 
   export default {
     components: {
-      "submitbutton": SubmitButton
+      "button": Button
 	},
 	data() {
     return {
