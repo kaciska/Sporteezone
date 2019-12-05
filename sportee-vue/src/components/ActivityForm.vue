@@ -42,11 +42,11 @@
 </template>
 
 <script>
-import SearchButton from './../components/SearchButton.vue'
+import Button from './../components/Button.vue'
 
 export default {
   components: {
-    "searchbutton": SearchButton
+    "button": Button
   },
   data() {
     return {
