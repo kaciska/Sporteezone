@@ -25,7 +25,7 @@
 		<label for="subject">Zpráva</label>
 		<textarea v-model="message" id="subject" name="subject" placeholder="Prosím zadejte svou zprávu" style="height:200px"></textarea>
 
-		<button />
+		<button>Odeslat</button>
 
 	</form>
 </div>
