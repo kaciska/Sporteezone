@@ -5,6 +5,8 @@ import Blog from '../views/Blog.vue'
 import Project from '../views/Project.vue'
 import Contact from '../views/Contact.vue'
 import Review from '../views/Review.vue'
+import SearchResults from '../views/SearchResults.vue'
+import BlogDetail from '../views/BlogDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,16 @@ const routes = [
     path: '/recenze',
     name: 'review',
     component: Review
+  },
+  {
+    path: '/vysledky',
+    name: 'search',
+    component: SearchResults
+  },
+  {
+    path: '/clanek',
+    name: 'article',
+    component: BlogDetail
   }
 ]
 

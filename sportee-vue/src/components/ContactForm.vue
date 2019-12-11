@@ -7,25 +7,25 @@
 	novalidate="true">
 
 	<p v-if="errors.length">
-		<!--<b>Please correct the following error(s):</b>-->
+		<b>Prosím, opravte chyby, které nestaly při:</b>
 			<ul>
 			<li v-for="error in errors">{{ error }}</li>
 			</ul>
   	</p>
 
-		<label for="fname">Tvé jméno</label>
-		<input v-model="name" type="text" id="fname" name="firstname" placeholder="Jméno">
+      <label for="name">Jméno</label>
+      <input v-model="name" type="text" id="name" name="firstname" placeholder="Jméno">
 
-		<label for="lname">Tvé příjmení</label>
-		<input v-model="surname" type="text" id="lname" name="lastname" placeholder="Příjmení">
+      <label for="surname">Příjmení</label>
+      <input v-model="surname" type="text" id="surname" name="surname" placeholder="Příjmení">
 
-		<label for="lname">E-mail</label>
-		<input v-model="email" type="text" id="email" name="email" placeholder="E-mail">
+      <label for="email">E-mail</label>
+      <input v-model="email" type="text" id="email" name="email" placeholder="E-mail">
 
-		<label for="subject">Zpráva</label>
-		<textarea v-model="message" id="subject" name="subject" placeholder="Prosím zadejte svou zprávu" style="height:200px"></textarea>
+      <label for="subject">Zpráva</label>
+      <textarea v-model="message" id="subject" name="subject" placeholder="Prosím zadejte svou zprávu" style="height:200px"></textarea>
 
-		<button>Odeslat</button>
+      <button>Odeslat</button>
 
 	</form>
 </div>
@@ -84,6 +84,10 @@
   text-align: left;
 }
 
+.contacts-container {
+  display: grid;
+}
+
 input[type=text],
 select,
 textarea {
@@ -95,6 +99,7 @@ textarea {
   margin-top: 11px;
   margin-bottom: 16px;
   resize: vertical;
+  font-family: 'Cabin', sans-serif;
 
 }
 
@@ -112,6 +117,11 @@ input[type=submit]:hover {
     position: relative;
     z-index: 1;
   }
-}
 
+  .col {
+    display: flex;
+    align-items: center;
+  }
+
+}
 </style>

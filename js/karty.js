@@ -8,11 +8,19 @@ var fs = require("fs");
 
 	const cardsUrl = "https://www.activepass.cz/aktivity?activities=%5B%5D&locations=%5B%5D&gps_latitude=-1&gps_longitude=-1&orderBy=asc&page=1&resultsPerPage=18&searchString=&partnerSearch=true&activitySearch=false&view=list&sortBy=alphabet";
 
-	const response = await request(cardsUrl);
+	const options = {
+		url: cardsUrl,
+		headers: {
+		  'x-requested-with': 'xhr'
+		}
+	  };
+
+
+	const response = await request(options);
 
 	const $ = cheerio.load(response);
 
-
+	console.log(JSON.parse(response));
 
 
 	let gym = $("div[class='ActivityBox-name']").text().trim();

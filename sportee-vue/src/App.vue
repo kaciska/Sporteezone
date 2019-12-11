@@ -31,6 +31,7 @@
 		<li><router-link to="/projekt">O projektu</router-link></li>
 		<li><router-link to="/kontakt">Kontakt</router-link></li>
 	</ul>
+
 </div>
     <router-view/>
   </div>
