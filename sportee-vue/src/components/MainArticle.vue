@@ -8,7 +8,7 @@
 				hotjógy, kdy jsem zjistila, kolik benefitů mi cvičení ásán v teple přináší. Co mi jóga dává a kam chodím cvičit?
 			</p>
 		</div>
-		<button v-on:click="readArticle()">Číst více</button>
+		<router-link to="/clanek"><button>Číst více</button></router-link>
 	</div>
 </div>
 

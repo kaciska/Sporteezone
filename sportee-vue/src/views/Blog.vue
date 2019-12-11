@@ -4,6 +4,7 @@
 
 		<div class="blog-container">
 			<h1>Blog</h1>
+      <div class="border"></div>
 			<p>V našem blogu se dočtete novinky ze světa sportu, recenze na sportoviště a také informace o jednotlivých
 				sportech.</p>
 		</div>
@@ -44,6 +45,19 @@ export default {
 
 .blog-container {
 	margin: 30px;
+  text-align: center;
+}
+
+.blog-container p {
+	margin-bottom: 50px;
+}
+
+
+.border{
+  width: 160px;
+  height: 5px;
+  background: rgb(100, 195, 158);
+  margin: 26px auto;
 }
 
 @media (min-width: 860px) {

@@ -14,14 +14,14 @@ var fs = require("fs");
 
 	let courses = [];
 
-	$("span[class='ui-dialog-title']").each(function(){
+	$("span[class='name']").each(function(){
 		let course = {}
 		course.name = $(this).text().trim()
 		courses.push(course)
 	});
 
-	let day = $("p[class='actDesc']").text().trim();
-	$("p[class='actDesc']").each(function(i){
+	let day = $("td[class='endDay']").text().trim();
+	$("td[class='endDay']").each(function(i){
 		let course = courses[i];
 		course.day = $(this).text().trim()
 	});

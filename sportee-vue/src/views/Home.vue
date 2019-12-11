@@ -65,12 +65,7 @@ export default {
 
 @media (min-width: 860px) {
   .container {
-    width: 960px;
-    background-color: white;
-    margin: -80px auto 0 auto;
-    box-shadow: 0 0 8px 1px rgba(140, 138, 140, 1);
-    position: relative;
-    z-index: 1;
-  }
+    background-color: #f1f1f1;
+   }
 }
 </style>

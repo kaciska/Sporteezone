@@ -6,7 +6,7 @@ var fs = require("fs");
 
 	let itemList = [];
 
-	const weisserUrl = "https://rezervace.weissersportcentrum.cz/timeline/week?criteriaTimestamp&resetFilter=true#timelineCalendar";
+	const weisserUrl = "https://www.weissersportcentrum.cz/rezervace/";
 
 	const response = await request(weisserUrl);
 
@@ -17,7 +17,6 @@ var fs = require("fs");
 	$("div[class='lesson_name']").each(function(){
 		let course = {}
 		course.name = $(this).text().trim()
-		console.log(course.name);
 		courses.push(course)
 	});
 
@@ -27,8 +26,8 @@ var fs = require("fs");
 		course.day = $(this).text().trim()
 	});
 
-	let start = $("div[class='time start']").text().trim();
-	$("div[class='time start']").each(function(i){
+	let start = $("td[class='ott-tooltip-date']").text().trim();
+	$("td[class='ott-tooltip-date']").each(function(i){
 		let course = courses[i];
 		course.start = $(this).text().trim()
 	});
