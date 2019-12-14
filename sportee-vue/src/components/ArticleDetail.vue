@@ -1,8 +1,8 @@
 <template>
 <div class="container">
-	<h1>Detail článku nadpis</h1>
+	<h1><router-link v-bind:to="'/clanek/' + id">{{title}}</router-link></h1>
 
-	<p>Autor: Kateřina Blatná</p>
+	<p>Autor: {{author}}</p>
 
 	<P>15. 12. 2019</p>
 
@@ -14,7 +14,19 @@
 
 <script>
 export default {
-
+	props: [
+		'article',
+		'id',
+		'title',
+		'author',
+		'date',
+		'text',
+		'place',
+		'other',
+		'price',
+		'card',
+		'review'
+	]
 }
 </script>
 

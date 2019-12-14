@@ -2,6 +2,11 @@
 
   <div class="container blog">
 
+    <div v-for="article in this.articles">
+      <articledetail v-bind:title="article.title" v-bind:author="article.author" v-bind:id="article.id" />
+    </div>
+
+
 		<div class="blog-container">
 			<h1>Blog</h1>
       <div class="border"></div>
@@ -28,13 +33,44 @@
 
 import MainArticle from "./../components/MainArticle.vue"
 import OtherArticle from "./../components/OtherArticle.vue"
+import ArticleDetail from './../components/ArticleDetail.vue'
 
 export default {
   components: {
     "mainarticle": MainArticle,
-    "otherarticle": OtherArticle
-
-  }
+    "otherarticle": OtherArticle,
+    "articledetail": ArticleDetail
+  },
+  data() {
+		return {
+			articles: [{
+				id: null,
+				title: null,
+				author: null,
+				date: null,
+				text: null,
+				place: null,
+				other: null,
+				price: null,
+				card: null,
+				review: null,
+      }
+      ]
+		}
+	},
+	mounted() {
+		this.fetchArticles()
+	},
+	methods: {
+            fetchArticles() {
+              let id = this.$route.params.id;
+                      let url = 'http://localhost:8080/articles.json';
+                      axios.get(url)
+                          .then(response => {
+                      this.articles = response.data
+                  })
+			},
+	}
 
 }
 </script>
