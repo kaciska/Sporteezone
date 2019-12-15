@@ -3,23 +3,23 @@
     <h1>A o čem to celé bylo?</h1>
       <div class="border"></div>
     <p class="text">
-      Hlavním cílem našeho projektu bylo vytvořenou jednoduché aplikace, která má člověku zjednodušit život při
-      vybírání vhodné sportovní aktivity. Tak vznikl nápad SporteeZone.Pri vytváření aplikace jsme vycházeli nejen z
-      vlastní zkušenosti ale i se zkušenosti našich známých, kteří často potýkají s nedostatkem času kvůli
-      pracovní vytíženosti.
+      Hlavním cílem našeho projektu bylo vytvořit jednoduchou aplikaci, která má člověku zjednodušit život při
+      vybírání vhodné sportovní aktivity. Tak vznikl nápad SporteeZone. Při vytváření aplikace jsme vycházeli nejen z
+      vlastní zkušenosti, ale i ze zkušenosti našich známých, kteří se často potýkají s nedostatkem času kvůli
+      pracovní vytíženosti a hledají aktivity v konkrétním čase.
     </p>
 
     <p class="text">
-      Naše aplikace SporteeZone momentálně shromažďuje informace 5 vybraných sportovišť v centru Brna.
-      Hlavní částí ústředního menu je formulář, který filtruje aktivity na základě několik zvolených parametrů jako jsou
-      čas,
-      datum, místo, aktivita a karta. Na výsledný filtr aktivit byla použita metoda scrapování, která shromažďuje
-      veškeré informace z jednotlivých provozoven.
+      Naše aplikace SporteeZone momentálně shromažďuje informace 5 vybraných sportovišť v Brně.
+      Hlavní částí stránky je formulář, který filtruje aktivity na základě několika zvolených parametrů jako jsou
+      čas, datum a karta. Na sesbírání informací z provozoven jsme použili metodu scrapování pomocí knihovny Cheerio.js.
     </p>
 
     <p class="text">
-      Cílem našeho projektu bylo hlavně úspora času a rychlost vyhledávání jednotlivých aktivit pro uživatelů,
-      kteří mají zájem cvičit.
+      Cílem našeho projektu je především úspora času a rychlost vyhledávání jednotlivých aktivit pro uživatele,
+      kteří mají zájem cvičit a nestrávit zbytečný čas proklikáváním webů a rozvrhů. Do budoucna bychom chtěli samozřejmě
+      rozšířit počet provozoven, zdokonalit filtrování a také bychom se rádi spojili s provozovnami a vyzkoušeli
+      spolupráci.
     </p>
 
     <h2>Kdo stojí za projektem?</h2>
@@ -31,8 +31,8 @@
           <img class="foto" src="../assets/lenka.jpg" alt="Lenka Florišová">
         </div>
         <h3 class="text">Lenka Florišová</h3>
-        <p class="text">Člověk s velkým smyslem pro detail a dizain. Akademie mi otevřela nové obzory do světa
-          programování, UX a UI spojujíci interakci mezi zkušenosti zákazníků a designem.
+        <p class="text">Člověk s velkým smyslem pro detail a design. Akademie mi otevřela nové obzory do světa
+          programování, UX a UI spojující interakci mezi zkušenostmi zákazníků a designem.
         </p>
         <div class="icony">
           <a href="mailto:l.florisova(zav)gmail.com" target="_top">
