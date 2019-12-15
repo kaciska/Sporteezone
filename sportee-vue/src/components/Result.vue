@@ -7,56 +7,23 @@
       <div class="border"></div>
 
 
-		<div class="session-body">
-			<a href=""><h3>Befit.cz</h3></a>
+		<div v-for="(gym, index) in filteredGyms"  :key="index" class="session-body">
+
+			<a v-bind:href="gym.url"><h3>{{gym.name}}</h3></a>
+
 			<table>
 				<tr>
 					<th class="date">Datum</th>
 					<th class="time">Čas</th>
 					<th class="activity">Aktivita</th>
 				</tr>
-				<tr>
-					<td class="date">15. 12. 2019</td>
-					<td class="time">18:00</td>
-					<td class="activity">Bosu</td>
+				<tr v-for="(course, index) in gym.courses" :key="index">
+					<td class="date">{{(new Date(course.day).getDate()) + ". " + (new Date(course.day).getMonth() + 1) + ". " + (new Date(course.day).getFullYear())}}</td>
+					<td class="time">{{course.start}}</td>
+					<td class="activity">{{course.name}}</td>
 				</tr>
-				<tr>
-					<td class="date">15. 12. 2019</td>
-					<td class="time">18:30</td>
-					<td class="activity">Yóga</td>
-				</tr>
-				<tr>
-					<td class="date">15. 12. 2019</td>
-					<td class="time">18:40</td>
-					<td class="activity">Jumping</td>
-				</tr>
-			</table>
-		</div>
 
-		<div class="session-body">
-		<a href=""><h3>Afit.cz</h3></a>
-		<table>
-			<tr>
-				<th class="date">Datum</th>
-				<th class="time">Čas</th>
-				<th class="activity">Aktivita</th>
-			</tr>
-			<tr>
-				<td class="date">15. 12. 2019</td>
-				<td class="time">18:00</td>
-				<td class="activity">HEAT</td>
-			</tr>
-			<tr>
-				<td class="date">15. 12. 2019</td>
-				<td class="time">18:00</td>
-				<td class="activity">Pilates</td>
-			</tr>
-			<tr>
-				<td class="date">15. 12. 2019</td>
-				<td class="time">18:30</td>
-				<td class="activity">Jumping</td>
-			</tr>
-		</table>
+			</table>
 		</div>
 	</div>
 
@@ -64,14 +31,105 @@
 
 <script>
 export default {
+	data() {
+		return {
+			gyms: [],
+			filteredGyms: [],
+			url: ""
+		}
 
+	},
+	mounted() {
+		Promise.all([
+			this.fetchGym("http://localhost:8080/afit.json"),
+			this.fetchGym("http://localhost:8080/befit.json"),
+			this.fetchGym("http://localhost:8080/weisser.json"),
+			this.fetchGym("http://localhost:8080/kantor.json"),
+			this.fetchGym("http://localhost:8080/friend.json")
+
+		]).then(() => {
+			this.filterGyms();
+		});
+	},
+	methods: {
+		filterGyms() {
+			let date = this.$route.query.date;
+			let time = this.$route.query.time;
+			let multisport = this.$route.query.multisport;
+			let activepass = this.$route.query.activepass;
+
+			console.log(time);
+			this.gyms.forEach(gym => {
+
+				if ((multisport && !gym.multisport) || (activepass && !gym.activepass)) {
+					return;
+				}
+
+				let name = gym.name;
+				let courses = gym.courses.filter(course => {
+					if (date && date != course.day) {
+						return false;
+					}
+
+					if (time && time.padStart(5, '0') != course.start.padStart(5, '0')) {
+						return false;
+					}
+					return true;
+				})
+
+
+				if (courses.length) {
+					this.filteredGyms.push({
+						"name": name,
+						"courses": courses
+					})
+				}
+			})
+
+		},
+
+		fetchGym(url) {
+
+			return axios.get(url)
+				.then(response => {
+					response.data.forEach(gym => {
+
+						for (let key in gym) {
+							let newGym = gym[key];
+							newGym.name = this.getGymName(key);
+							this.gyms.push(newGym);
+						}
+
+					});
+				});
+		},
+
+		getGymName(slug) {
+
+			switch(slug) {
+			case "afit":
+				return "Afit.cz";
+			case "befit":
+				return "Befitbrno.cz";
+			case "weisser":
+				return "Weissersportcentrum.cz";
+			case "kantor":
+				return "Kantorfitness.cz";
+			case "friend":
+				return "Friendsfit.cz";
+			default:
+				return "-";
+			}
+
+		}
+	}
 }
 </script>
 
 <style scoped>
 
 .container {
-	width: 50%;
+	max-width: 1000px;
 	margin: 0 auto;
 	text-align: center;
 }

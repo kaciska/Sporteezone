@@ -4,6 +4,7 @@
       <h1>Recenze</h1>
       <div class="border"></div>
       <div class="row">
+
         <div class="col">
           <div class="testimonial">
             <img src="../assets/afit.png" alt="afit logo">
@@ -96,7 +97,7 @@
   }
 </script>
 
-<style scoped>
+<style>
   .testimonials{
   padding:20px 0;
   background: #f1f1f1;

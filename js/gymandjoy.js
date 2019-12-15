@@ -6,22 +6,22 @@ var fs = require("fs");
 
 	let itemList = [];
 
-	const yogaUrl = "https://yogahouse.isportsystem.cz/ajax/ajax.schema.php?day=12&month=12&year=2019&id_sport=5&default_view=day&reset_date=0&event=create&id_infotab=0&time=&filterId=false&filterChecked=false&tab_type=activity&numberOfDays=35";
+	const gymAndJoyUrl = "https://gymandjoy.reservio.com/booking/business/event?businessId=0c305322-c23e-11e6-8b1c-525400ef745e";
 
-	const response = await request(yogaUrl);
+	const response = await request(gymAndJoyUrl);
 
 	const $ = cheerio.load(response);
 
 	let courses = [];
 
-	$("span[class='name']").each(function(){
+	$("div[class='calendarEvent']").each(function(){
 		let course = {}
 		course.name = $(this).text().trim()
 		courses.push(course)
 	});
 
-	let day = $("td[class='endDay ']").text().trim();
-	$("td[class='endDay ']").each(function(i){
+	let day = $("span[class='date']").text().trim();
+	$("span[class='date']").each(function(i){
 		let course = courses[i];
 		course.day = $(this).text().trim()
 	});
@@ -32,13 +32,17 @@ var fs = require("fs");
 		course.start = $(this).text().trim()
 	});
 
-	let availability = $("span[class='capacity']").text().trim();
-	$("span[class='capacity']").each(function(i){
+	/*let end = $("div[class='time end']").text().trim();
+	$("div[class='time end']").each(function(i){
 		let course = courses[i];
-		course.availability = $(this).text().trim()
+		course.end = $(this).text().trim()
 	});
 
-
+	let availability = $("div[class='availability']").text().trim();
+	$("div[class='availability']").each(function(i){
+		let course = courses[i];
+		course.availability = $(this).text().trim()
+	});*/
 
 	/*let price = $("div[class='price']").text().trim();
 	$("div[class='price']").each(function(i){
@@ -47,14 +51,12 @@ var fs = require("fs");
 	});*/
 
 	itemList.push({
-		yogaHouse: {
+		gymandjoy: {
 		 courses
 		}
 	  });
 
-
-
-	fs.writeFile("./yogaHouse.json", JSON.stringify(itemList, null, 4).replace(/\\n/g,""), (err) => {
+	fs.writeFile("./gymandjoy.json", JSON.stringify(itemList, null, 4).replace(/\\n/g,""), (err) => {
 
 		if (err) {
 			console.error(err);

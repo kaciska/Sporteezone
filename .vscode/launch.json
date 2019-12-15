@@ -11,7 +11,7 @@
 			"request": "launch",
 			"name": "Launch Program",
 
-			"program": "${workspaceFolder}/cheerio.js"
+			"program": "C:/Users/Katka/Desktop/Czechitas/DA-projekt/Sporteezone/js/cheerio.js"
 		}
 	]
 }

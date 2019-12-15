@@ -85,7 +85,7 @@ body {
     font-size: 18px;
     margin: 0;
     min-width: 390px;
-    background-color: #fcfbff;
+    background-color: #f1f1f1;
 }
 
 #kontejner {

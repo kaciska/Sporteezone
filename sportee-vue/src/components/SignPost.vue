@@ -1,9 +1,6 @@
 <template>
 <div>
 
-
-	<hr>
-
 	<div class="object-container">
 		<h2>Rozcestník kam dále</h2>
 		<p class="object-text">Chceš se o projektu dozvědět víc? Hledáš recenze na provozovny nebo informace o jednotlivých sportovních aktivitách?

@@ -42,7 +42,7 @@ const routes = [
     component: SearchResults
   },
   {
-    path: '/clanek',
+    path: '/clanek/:id',
     name: 'article',
     component: BlogDetail
   }
