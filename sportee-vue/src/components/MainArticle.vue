@@ -8,7 +8,7 @@
 				hotjógy, kdy jsem zjistila, kolik benefitů mi cvičení ásán v teple přináší. Co mi jóga dává a kam chodím cvičit?
 			</p>
 		</div>
-		<router-link to="/clanek"><button>Číst více</button></router-link>
+		<router-link to="/clanek/1"><button>Číst více</button></router-link>
 	</div>
 </div>
 
@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .main-article img {
 	width: 300px;

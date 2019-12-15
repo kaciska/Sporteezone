@@ -1,6 +1,11 @@
 <template>
 
-<articledetail v-bind:title="this.article.title" v-bind:author="this.article.author" />
+<articledetail v-bind:title="this.article.title" v-bind:author="this.article.author" v-bind:img="this.article.img" v-bind:date="this.article.date"
+v-bind:text1="this.article.text1" v-bind:text2="this.article.text2" v-bind:text3="this.article.text3" v-bind:text4="this.article.text4" v-bind:place="this.article.place" v-bind:other="this.article.other" v-bind:price="this.article.price"
+v-bind:card="this.article.card" v-bind:review="this.article.review"
+
+
+/>
 
 </template>
 
@@ -15,9 +20,13 @@ export default {
 				article: null,
 				id: null,
 				title: null,
+				img: null,
 				author: null,
 				date: null,
-				text: null,
+				text1: null,
+				text2: null,
+				text3: null,
+				text4: null,
 				place: null,
 				other: null,
 				price: null,

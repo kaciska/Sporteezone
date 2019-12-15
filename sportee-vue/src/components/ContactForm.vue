@@ -1,17 +1,22 @@
 <template>
 <div class="container">
 	<form id="app"
-	@submit="checkForm"
+	@submit.prevent="sendForm"
 	action="https://vuejs.org/"
 	method="post"
 	novalidate="true">
 
 	<p v-if="errors.length">
-		<b>Prosím, opravte chyby, které nestaly při:</b>
+		<b>Prosím, opravte chyby, které nastaly při odesílání:</b>
 			<ul>
 			<li v-for="error in errors">{{ error }}</li>
 			</ul>
   	</p>
+
+    <div v-if="formSend" class="after-send">
+      <h3>Děkujeme!</h3>
+      <P>Vaše zpráva byla úspěšně odeslána.</p>
+    </div>
 
       <label for="name">Jméno</label>
       <input v-model="name" type="text" id="name" name="firstname" placeholder="Jméno">
@@ -28,6 +33,8 @@
       <button>Odeslat</button>
 
 	</form>
+
+
 </div>
 </template>
 
@@ -44,7 +51,8 @@
       name: "",
       surname: "",
       email: "",
-      message: ""
+      message: "",
+      formSend: false
 	}
 	},
 	methods: {
@@ -67,6 +75,16 @@
 
       e.preventDefault();
     },
+    sendForm() {
+      this.checkForm();
+      if (this.errors.length == 0) {
+        this.name = "",
+        this.surname = "",
+        this.email = "",
+        this.message = "",
+        this.formSend = true
+      }
+    },
     validEmail: function (email) {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
@@ -82,6 +100,7 @@
   padding: 20px;
   margin-top: 50px;
   text-align: left;
+  background-color: #f1f1f1;
 }
 
 .contacts-container {
@@ -107,21 +126,30 @@ input[type=submit]:hover {
   background-color: solid grey;
 }
 
+.after-send {
+    box-shadow: 0 0 8px 1px rgba(140, 138, 140, 1);
+    text-align: center;
+    width: 300px;
+    padding: 30px;
+    margin: auto;
+}
+
 @media (min-width: 860px) {
   .container {
     width: 960px;
     background-color: white;
-	margin: 0 auto;
-	margin-top: 50px;
+	  margin: 0 auto;
+	  margin-top: 50px;
     box-shadow: 0 0 8px 1px rgba(140, 138, 140, 1);
     position: relative;
     z-index: 1;
+    margin-bottom: 80px;
   }
 
   .col {
     display: flex;
     align-items: center;
   }
-
 }
+
 </style>

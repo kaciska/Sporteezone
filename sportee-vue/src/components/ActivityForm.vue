@@ -1,32 +1,19 @@
 <template>
+<div>
+
+<form @submit.prevent="sendForm" action="/vysledky" method="GET">
 
   <div id="app">
       <h1>Vyber si aktivitu</h1>
       <div class="date">
           <label>Datum:</label>
           <input v-model="date" placeholder="Vyber datum" type="date" name="date">
-          <p>{{date}}</p>
       </div>
 
       <div class="time">
           <label>Zvolte čas:</label>
           <input v-model="time" type="time" name="time">
-           <p>{{time}}</p>
       </div>
-      <div class="activity">
-          <label>Aktivita:</label>
-          <select v-model="selected">
-              <option>Vyber aktivitu:</option>
-              <option>Aerobik</option>
-              <option>Bosu</option>
-              <option>Jóga</option>
-              <option>Kruhový trénink</option>
-              <option>Pilates</option>
-              <option>Walking</option>
-          </select>
-      </div>
-
-      <p>{{selected}}</p>
 
       <div class="card">
           <label>Vyber kartu:</label><br>
@@ -34,10 +21,11 @@
           <input v-model="activepass" type="checkbox" class="largerCheckbox" id="activepass" name="activepass" value="activepass"><label>Activepass</label>
       </div>
 
-      <p>{{multisport}},{{activepass}}</p>
     <button>Vyhledat</button>
   </div>
 
+</form>
+</div>
 
 </template>
 
@@ -56,6 +44,11 @@ export default {
       multisport: false,
       activepass: false
     }
+  },
+  methods: {
+    sendForm(event) {
+      event.currentTarget.submit();
+    }
   }
 }
 </script>
@@ -63,7 +56,8 @@ export default {
 <style scoped>
 #app {
   width: 100%;
-  padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
   color: black;
 }
@@ -95,7 +89,8 @@ select
   border-radius: 5px;
   border: none;
   margin-left: 10px;
-  height: 35px;
+  height: 50px;
+  font-size: 20px;
 }
 
 input[type="checkbox"] {
@@ -132,6 +127,20 @@ input.largerCheckbox {
   width: 20px;
   height: 20px;
   margin: 5px;
+}
+
+@media (min-width: 1000px) {
+    #app {
+      width: 550px;
+      background-color: white;
+      border-radius: 10px;
+    }
+    form {
+      position: absolute;
+      top: 145px;
+      right: 60px;
+    }
+
 }
 
 

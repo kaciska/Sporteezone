@@ -8,7 +8,7 @@
 					myslet, že sport a cvičení jsou možné pouze tehdy, když jsme mladší. Je milnou představou, že
 					zahájení nového sportu není tak výhodné, když je člověku několik let. To ale není úplne pravda!</p>
 			</div>
-			<button onclick="readArticle()">Číst více</button>
+			<router-link to="/clanek/2"><button>Číst více</button></router-link>
 		</div>
 	</div>
 </template>
@@ -33,8 +33,8 @@
 		margin-left: 20px;
 	}
 
-	.article-holder button {
-		margin-left: 20px
+	.article-holder {
+		margin-left: 20px;
 	}
 
 	@media (min-width: 650px) {
