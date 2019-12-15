@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-	<h1><router-link v-bind:to="'/clanek/' + id">{{title}}</router-link></h1>
+	<h1><router-link v-bind:to="'/#/clanek/' + id">{{title}}</router-link></h1>
 
 	<p><strong>Autor:</strong> {{author}}</p>
 
