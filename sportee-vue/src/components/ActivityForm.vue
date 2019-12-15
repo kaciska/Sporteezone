@@ -1,7 +1,7 @@
 <template>
 <div>
 
-<form @submit.prevent="sendForm" action="/vysledky" method="GET">
+<form @submit.prevent="sendForm" action="/#/vysledky" method="GET">
 
   <div id="app">
       <h1>Vyber si aktivitu</h1>
