@@ -41,11 +41,11 @@ export default {
 	},
 	mounted() {
 		Promise.all([
-			this.fetchGym("http://localhost:8080/afit.json"),
-			this.fetchGym("http://localhost:8080/befit.json"),
-			this.fetchGym("http://localhost:8080/weisser.json"),
-			this.fetchGym("http://localhost:8080/kantor.json"),
-			this.fetchGym("http://localhost:8080/friend.json")
+			this.fetchGym("/afit.json"),
+			this.fetchGym("/befit.json"),
+			this.fetchGym("/weisser.json"),
+			this.fetchGym("/kantor.json"),
+			this.fetchGym("/friend.json")
 
 		]).then(() => {
 			this.filterGyms();

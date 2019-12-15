@@ -75,7 +75,7 @@ export default {
 	methods: {
     fetchArticles() {
       let id = this.$route.params.id;
-        let url = 'http://localhost:8080/articles.json';
+        let url = '/articles.json';
         axios.get(url)
             .then(response => {
         this.articles = response.data
